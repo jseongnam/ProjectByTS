@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { Response } from 'express';
 import {authReq, err} from "../types"
-const loginRequired = async(req : authReq, res : Response, next) => {
+export const loginRequired = async(req : authReq, res : Response, next) => {
     
     try{
         const accessToken : string|null = req.headers.authorization || null;
@@ -22,4 +22,3 @@ const loginRequired = async(req : authReq, res : Response, next) => {
     }
 }
 
-export default loginRequired;

@@ -1,12 +1,12 @@
 import express from 'express';
-import cartController from '../controllers';
-import loginRequired from '../utils/auth';
+import {PostuserSignUpController,PostuserSignInController,GetuserOrderDetailController,GetuserUserInformationController} from '../controllers';
+import {loginRequired} from '../utils/auth';
 
 const router = express.Router();
 
-router.get('', loginRequired, cartController.getCarts);
-router.post('', loginRequired, cartController.postCarts);
-router.delete('', loginRequired, cartController.deleteCarts);
-router.patch('', loginRequired, cartController.patchCarts);
+router.get('', loginRequired, PostuserSignUpController);
+router.post('', loginRequired, PostuserSignInController);
+router.delete('', loginRequired, GetuserOrderDetailController);
+router.patch('', loginRequired, GetuserUserInformationController);
 
 export default router;
