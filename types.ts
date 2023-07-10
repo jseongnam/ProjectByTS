@@ -1,4 +1,5 @@
-type authReq = {
+import { Request, Response } from 'express';
+type authReq = Request & {
     headers : {
         authorization? : string
     };

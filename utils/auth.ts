@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
-import { Response } from 'express';
+import { Request, Response } from 'express';
 import {authReq, err} from "../types"
-export const loginRequired = async(req : authReq, res : Response, next) => {
+export const loginRequired = async(req : Request, res : Response, next) => {
     
     try{
         const accessToken : string|null = req.headers.authorization || null;
