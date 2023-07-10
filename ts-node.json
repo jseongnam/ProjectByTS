@@ -1,0 +1,3 @@
+{
+    "exec": "ts-node ./path/to/your/server/file.ts"
+}
